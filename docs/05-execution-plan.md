@@ -21,7 +21,7 @@ flowchart LR
   click UC02 "https://github.com/la3lma/agentic-breakout-example/pull/7" "PR #7"
   click UC03 "https://github.com/la3lma/agentic-breakout-example/pull/8" "PR #8"
   click UC04 "https://github.com/la3lma/agentic-breakout-example/pull/9" "PR #9"
-  click UC05 "https://github.com/la3lma/agentic-breakout-example/issues/5" "Issue #5"
+  click UC05 "https://github.com/la3lma/agentic-breakout-example/pull/10" "PR #10"
 ```
 
 ## Use Cases
@@ -69,8 +69,9 @@ flowchart LR
 ### UC-05 Capture Evidence Site and Update Issue-to-PR Graph
 
 - Issue: https://github.com/la3lma/agentic-breakout-example/issues/5
-- PR: pending
+- PR: https://github.com/la3lma/agentic-breakout-example/pull/10
 - Goal: capture evidence artifacts and update the graph links to PRs.
 - Pre-conditions: polished game exists and previous PRs exist.
 - Post-conditions: evidence site exists, screenshots and MP4 clips are present, lab notebook is updated, graph links to PRs.
 - Observables: `evidence/index.html`, screenshots, videos, final graph.
+- Status: complete.

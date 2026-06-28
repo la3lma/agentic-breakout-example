@@ -229,6 +229,7 @@ async function writeEvidenceIndex() {
         <li><a href="https://github.com/la3lma/agentic-breakout-example/pull/7">PR #7: Implement playable Breakout core</a></li>
         <li><a href="https://github.com/la3lma/agentic-breakout-example/pull/8">PR #8: Add single-browser high score</a></li>
         <li><a href="https://github.com/la3lma/agentic-breakout-example/pull/9">PR #9: Polish responsive Breakout input</a></li>
+        <li><a href="https://github.com/la3lma/agentic-breakout-example/pull/10">PR #10: Capture evidence site and final graph</a></li>
       </ul>
     </section>
 

@@ -67,3 +67,7 @@ For UC-05, the evidence site is generated as static HTML so it can be inspected 
 ### Agent Note
 
 Mobile evidence capture initially used pointer input, but the narrow viewport layout made that brittle for automation. The capture now starts the game through the same browser-visible Breakout API used by tests and moves the paddle directly for a short demonstration clip.
+
+### Agent Note
+
+Opened PR #10 for UC-05. The execution graph and evidence page now link the final use case to the pull request that produced the evidence artifacts.
