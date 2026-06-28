@@ -12,10 +12,34 @@ flowchart LR
   UC04["UC-04\nPolish and\ninput ergonomics"]
   UC05["UC-05\nEvidence site\nand PR graph"]
 
+  subgraph Legend["Legend"]
+    LDone["Green -- done"]
+    LReady["Yellow -- ready to run"]
+    LRunning["Orange -- running"]
+    LReview["Blue -- ready for review"]
+    LBlocked["Red -- blocked"]
+    LDeferred["Purple -- deferred for later"]
+  end
+
   UC01 --> UC02
   UC02 --> UC03
   UC03 --> UC04
   UC04 --> UC05
+
+  classDef done fill:#d9f7d9,stroke:#238636,color:#0b3d16,stroke-width:2px
+  classDef ready fill:#fff3bf,stroke:#b08900,color:#4b3b00,stroke-width:2px
+  classDef running fill:#ffe0b2,stroke:#c26a00,color:#4a2500,stroke-width:2px
+  classDef review fill:#dbeafe,stroke:#2563eb,color:#0f2f70,stroke-width:2px
+  classDef blocked fill:#ffd6d6,stroke:#b42318,color:#5c1111,stroke-width:2px
+  classDef deferred fill:#eadcff,stroke:#7e3fb2,color:#3a1a5f,stroke-width:2px
+
+  class UC01,UC02,UC03,UC04,UC05 done
+  class LDone done
+  class LReady ready
+  class LRunning running
+  class LReview review
+  class LBlocked blocked
+  class LDeferred deferred
 
   click UC01 "https://github.com/la3lma/agentic-breakout-example/pull/6" "PR #6"
   click UC02 "https://github.com/la3lma/agentic-breakout-example/pull/7" "PR #7"
