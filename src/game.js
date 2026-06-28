@@ -2,6 +2,7 @@ const canvas = document.querySelector("#game");
 const ctx = canvas.getContext("2d");
 const scoreEl = document.querySelector("#score");
 const livesEl = document.querySelector("#lives");
+const bestScoreEl = document.querySelector("#bestScore");
 const statusEl = document.querySelector("#status");
 const startButton = document.querySelector("#startButton");
 const pauseButton = document.querySelector("#pauseButton");
@@ -9,6 +10,7 @@ const restartButton = document.querySelector("#restartButton");
 
 const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
+const HIGH_SCORE_KEY = "agentic-breakout.bestScore";
 
 const colors = {
   bg: "#090b10",
@@ -23,6 +25,7 @@ const colors = {
 const game = {
   state: "ready",
   score: 0,
+  bestScore: loadBestScore(),
   lives: 3,
   bricksRemaining: 0,
   keys: new Set(),
@@ -43,6 +46,25 @@ const game = {
   bricks: [],
   lastTime: 0,
 };
+
+function loadBestScore() {
+  const raw = localStorage.getItem(HIGH_SCORE_KEY);
+  const parsed = Number.parseInt(raw || "0", 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+}
+
+function saveBestScore() {
+  localStorage.setItem(HIGH_SCORE_KEY, String(game.bestScore));
+}
+
+function recordScore(value) {
+  game.score = value;
+  if (game.score > game.bestScore) {
+    game.bestScore = game.score;
+    saveBestScore();
+  }
+  updateHud();
+}
 
 function resetBricks() {
   const rows = 6;
@@ -81,6 +103,7 @@ function resetBall() {
 function resetGame() {
   game.state = "ready";
   game.score = 0;
+  game.bestScore = loadBestScore();
   game.lives = 3;
   game.paddle.x = WIDTH / 2 - game.paddle.width / 2;
   resetBricks();
@@ -113,6 +136,7 @@ function pauseGame() {
 function updateHud() {
   scoreEl.textContent = String(game.score);
   livesEl.textContent = String(game.lives);
+  bestScoreEl.textContent = String(game.bestScore);
   const status = {
     ready: "Ready",
     playing: "Playing",
@@ -183,7 +207,7 @@ function updateBall(dt) {
     if (hitBrick) {
       brick.alive = false;
       game.bricksRemaining -= 1;
-      game.score += 100;
+      recordScore(game.score + 100);
       ball.vy *= -1;
       if (game.bricksRemaining === 0) {
         game.state = "won";
@@ -359,5 +383,5 @@ window.__breakout = {
   startGame,
   pauseGame,
   resetGame,
+  recordScore,
 };
-

@@ -39,3 +39,11 @@ For UC-02, the game core is implemented as a dependency-light static browser app
 ### Agent Note
 
 Added a small Node static server and a Playwright smoke test so the game can be loaded and checked before the later evidence-capture use case.
+
+### Agent Note
+
+Merged PR #7 for UC-02. The execution graph now links UC-02 to its pull request.
+
+### Agent Decision
+
+For UC-03, high score is intentionally one number in `localStorage` under `agentic-breakout.bestScore`. There is no score history, player name, server call, or leaderboard. This matches the single-user, single-browser requirement and keeps the product surface small.
