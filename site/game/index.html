@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play | Agentic Breakout</title>
+  <meta name="description" content="Playable JavaScript Breakout game.">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Agentic Breakout</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Overview</a><a href="../game/index.html" aria-current="page">Play</a><a href="../evidence/index.html">Evidence</a><a href="../plan.html">Plan</a><a href="../docs/lab-notebook.html">Notes</a><a href="../docs/index.html">Docs</a>
+    </nav>
+  </header>
+  <main class="section">
+  <h1>Play the Game</h1>
+  <p>This is the same browser-only JavaScript Breakout implementation documented by the plan and evidence trail. The best score is local to this browser.</p>
+  <div class="game-frame-wrap">
+    <iframe class="game-frame" title="Playable Agentic Breakout game" src="play.html"></iframe>
+  </div>
+</main>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+</body>
+</html>

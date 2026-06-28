@@ -11,20 +11,13 @@ flowchart LR
   UC03["UC-03\nSingle-browser\nhigh score"]
   UC04["UC-04\nPolish and\ninput ergonomics"]
   UC05["UC-05\nEvidence site\nand PR graph"]
-
-  subgraph Legend["Legend"]
-    LDone["Green -- done"]
-    LReady["Yellow -- ready to run"]
-    LRunning["Orange -- running"]
-    LReview["Blue -- ready for review"]
-    LBlocked["Red -- blocked"]
-    LDeferred["Purple -- deferred for later"]
-  end
+  UC06["UC-06\nDocumentation site\nand Pages"]
 
   UC01 --> UC02
   UC02 --> UC03
   UC03 --> UC04
   UC04 --> UC05
+  UC05 --> UC06
 
   classDef done fill:#d9f7d9,stroke:#238636,color:#0b3d16,stroke-width:2px
   classDef ready fill:#fff3bf,stroke:#b08900,color:#4b3b00,stroke-width:2px
@@ -34,19 +27,24 @@ flowchart LR
   classDef deferred fill:#eadcff,stroke:#7e3fb2,color:#3a1a5f,stroke-width:2px
 
   class UC01,UC02,UC03,UC04,UC05 done
-  class LDone done
-  class LReady ready
-  class LRunning running
-  class LReview review
-  class LBlocked blocked
-  class LDeferred deferred
+  class UC06 running
 
   click UC01 "https://github.com/la3lma/agentic-breakout-example/pull/6" "PR #6"
   click UC02 "https://github.com/la3lma/agentic-breakout-example/pull/7" "PR #7"
   click UC03 "https://github.com/la3lma/agentic-breakout-example/pull/8" "PR #8"
   click UC04 "https://github.com/la3lma/agentic-breakout-example/pull/9" "PR #9"
   click UC05 "https://github.com/la3lma/agentic-breakout-example/pull/10" "PR #10"
+  click UC06 "https://github.com/la3lma/agentic-breakout-example/issues/11" "Issue #11"
 ```
+
+<div class="status-legend" aria-label="Use-case lifecycle legend">
+  <span class="status-chip status-done">Done</span>
+  <span class="status-chip status-ready">Ready</span>
+  <span class="status-chip status-running">Running</span>
+  <span class="status-chip status-review">Review</span>
+  <span class="status-chip status-blocked">Blocked</span>
+  <span class="status-chip status-deferred">Deferred</span>
+</div>
 
 ## Use Cases
 
@@ -99,3 +97,13 @@ flowchart LR
 - Post-conditions: evidence site exists, screenshots and MP4 clips are present, lab notebook is updated, graph links to PRs.
 - Observables: `evidence/index.html`, screenshots, videos, final graph.
 - Status: complete.
+
+### UC-06 Publish Documentation Site
+
+- Issue: https://github.com/la3lma/agentic-breakout-example/issues/11
+- PR: pending
+- Goal: publish a polished GitHub Pages documentation site that presents the project, document stack, evidence, and playable game.
+- Pre-conditions: the game, document stack, evidence captures, and PR graph exist.
+- Post-conditions: the generated site contains TL;DR, concept/vision, PRD, architecture, plan, source instructions, lab notebook, browsable evidence, and a playable game page at `https://la3lma.github.io/agentic-breakout-example/`.
+- Observables: generated `site/` pages, compact graph legend, GitHub Pages workflow, published Pages URL, and playable game from the documentation site.
+- Status: running.

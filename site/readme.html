@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>README | Agentic Breakout</title>
+  <meta name="description" content="Repository README for Agentic Breakout.">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Agentic Breakout</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="index.html">Overview</a><a href="game/index.html">Play</a><a href="evidence/index.html">Evidence</a><a href="plan.html">Plan</a><a href="docs/lab-notebook.html">Notes</a><a href="docs/index.html" aria-current="page">Docs</a>
+    </nav>
+  </header>
+  <main class="doc-layout">
+  <article class="doc">
+    <h1>Agentic Breakout Example</h1>
+<p>This repository is a worked example of a document-stack methodology for agentic software development, implemented by building a small JavaScript Breakout game.</p>
+<p>The game is intentionally browser-only: static HTML, CSS, and JavaScript, with a single-user high score stored in one browser.</p>
+<h2>Documentation Site</h2>
+<p>The public documentation site is published through GitHub Pages:</p>
+<p><a href="https://la3lma.github.io/agentic-breakout-example/">https://la3lma.github.io/agentic-breakout-example/</a></p>
+<figure><img src="evidence/assets/screenshots/02-playing.png" alt="Agentic Breakout game in play"></figure>
+<h2>Document Stack</h2>
+<ul>
+<li><code>docs/00-source-instructions.md</code></li>
+<li><code>docs/01-tldr.md</code></li>
+<li><code>docs/02-concept.md</code></li>
+<li><code>docs/03-prd.md</code></li>
+<li><code>docs/04-architecture.md</code></li>
+<li><code>docs/05-execution-plan.md</code></li>
+<li><code>docs/06-lab-notebook.md</code></li>
+</ul>
+<p>The lab notebook is part of the stack. It captures human instructions, agent notes, decisions, detours, and validation observations that do not belong in the stricter execution plan.</p>
+<h2>Live Plan</h2>
+<p>Generate the live plan page:</p>
+<pre><code>make plan</code></pre>
+<p>Open or refresh the plan in the system browser using AppleScript:</p>
+<pre><code>make refresh-plan</code></pre>
+<p>The generated page is written to <code>site/plan.html</code>.</p>
+<h2>Publish</h2>
+<p>Generate the full documentation site locally:</p>
+<pre><code>make site</code></pre>
+<p>After changes are merged to <code>main</code>, publish the generated site through GitHub Pages:</p>
+<pre><code>make publish</code></pre>
+  </article>
+  <aside class="side-panel">
+    <p class="kicker">Repository</p>
+    <h2>README</h2>
+    <p>The repository README remains the command-oriented entry point for local development.</p>
+  </aside>
+</main>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+</body>
+</html>

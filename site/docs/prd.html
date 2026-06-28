@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Requirements | Agentic Breakout</title>
+  <meta name="description" content="Functional, evidence, and documentation requirements for the Breakout game.">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Agentic Breakout</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Overview</a><a href="../game/index.html">Play</a><a href="../evidence/index.html">Evidence</a><a href="../plan.html">Plan</a><a href="../docs/lab-notebook.html">Notes</a><a href="../docs/index.html" aria-current="page">Docs</a>
+    </nav>
+  </header>
+  <main class="doc-layout">
+  <article class="doc">
+    <h1>Product Requirements Document</h1>
+<h2>Product</h2>
+<p>A single-page JavaScript Breakout game that can be opened in a browser and played immediately, accompanied by a polished documentation site that presents the method, documents, evidence, and playable artifact.</p>
+<h2>Target User</h2>
+<p>A developer or reader evaluating the document-stack methodology. The game should be simple to run and pleasant enough to play for a short demonstration.</p>
+<h2>Functional Requirements</h2>
+<ul>
+<li>Render a Breakout playfield with paddle, ball, walls, and bricks.</li>
+<li>Support keyboard controls.</li>
+<li>Support pointer/touch paddle movement where available.</li>
+<li>Let the player start, pause/resume, and restart the game.</li>
+<li>Track current score.</li>
+<li>Track remaining lives.</li>
+<li>Detect ball, wall, paddle, and brick collisions.</li>
+<li>Remove bricks when hit.</li>
+<li>End the round when all bricks are cleared.</li>
+<li>End the game when lives are exhausted.</li>
+<li>Store a single best score in <code>localStorage</code>.</li>
+<li>Restore the best score after reload in the same browser.</li>
+</ul>
+<h2>Evidence Requirements</h2>
+<ul>
+<li>Capture an initial game screenshot.</li>
+<li>Capture a screenshot after gameplay has begun.</li>
+<li>Capture a screenshot at a narrow/mobile viewport.</li>
+<li>Capture at least one short MP4 clip showing real-time gameplay.</li>
+<li>Publish the captures through a static evidence page.</li>
+</ul>
+<h2>Documentation Requirements</h2>
+<ul>
+<li>Keep the document stack in <code>docs/</code>.</li>
+<li>Keep the lab notebook in <code>docs/06-lab-notebook.md</code>.</li>
+<li>Keep an execution graph in the plan document.</li>
+<li>Provide a generated <code>site/plan.html</code> view of the plan.</li>
+<li>Provide a generated GitHub Pages site with overview, TL;DR, vision/concept, PRD, architecture, source instructions, execution plan, lab notebook, evidence browser, and playable game.</li>
+<li>Keep the use-case graph legend compact, using small lifecycle color chips instead of a large graph block.</li>
+<li>Provide a Makefile target that refreshes the plan tab in the system browser via AppleScript.</li>
+<li>Provide a Makefile target that publishes the generated site through GitHub Pages.</li>
+<li>Point the repository README to the Pages site and show a game screenshot.</li>
+</ul>
+  </article>
+  <aside class="side-panel">
+    <p class="kicker">Document stack</p>
+    <h2>Product Requirements</h2>
+    <p>Functional, evidence, and documentation requirements for the Breakout game.</p>
+    <p><a href="index.html">Back to all documents</a></p>
+  </aside>
+</main>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+</body>
+</html>
