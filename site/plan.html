@@ -77,7 +77,7 @@
   <header>
     <h1>Agentic Breakout Plan</h1>
     <p>Live generated view of the execution plan and lab notebook.</p>
-    <p class="timestamp">Generated 2026-06-28T20:30:40.312Z</p>
+    <p class="timestamp">Generated 2026-06-28T20:36:53.766Z</p>
   </header>
   <main>
     <section>
@@ -99,7 +99,7 @@
   click UC01 &quot;https://github.com/la3lma/agentic-breakout-example/pull/6&quot; &quot;PR #6&quot;
   click UC02 &quot;https://github.com/la3lma/agentic-breakout-example/pull/7&quot; &quot;PR #7&quot;
   click UC03 &quot;https://github.com/la3lma/agentic-breakout-example/pull/8&quot; &quot;PR #8&quot;
-  click UC04 &quot;https://github.com/la3lma/agentic-breakout-example/issues/4&quot; &quot;Issue #4&quot;
+  click UC04 &quot;https://github.com/la3lma/agentic-breakout-example/pull/9&quot; &quot;PR #9&quot;
   click UC05 &quot;https://github.com/la3lma/agentic-breakout-example/issues/5&quot; &quot;Issue #5&quot;</pre>
 <h2>Use Cases</h2>
 <h3>UC-01 Bootstrap Repository and Document Stack</h3>
@@ -135,11 +135,12 @@
 <h3>UC-04 Polish Presentation and Input Ergonomics</h3>
 <ul>
 <li>Issue: <a href="https://github.com/la3lma/agentic-breakout-example/issues/4">https://github.com/la3lma/agentic-breakout-example/issues/4</a></li>
-<li>PR: pending</li>
+<li>PR: <a href="https://github.com/la3lma/agentic-breakout-example/pull/9">https://github.com/la3lma/agentic-breakout-example/pull/9</a></li>
 <li>Goal: make the game comfortable to demonstrate.</li>
 <li>Pre-conditions: core and high score exist.</li>
 <li>Post-conditions: responsive layout, keyboard and pointer/touch controls, clear status UI.</li>
 <li>Observables: desktop and mobile screenshots, short gameplay clip.</li>
+<li>Status: complete.</li>
 </ul>
 <h3>UC-05 Capture Evidence Site and Update Issue-to-PR Graph</h3>
 <ul>
@@ -181,6 +182,12 @@
 <p>Merged PR #8 for UC-03. The execution graph now links UC-03 to its pull request.</p>
 <h3>Agent Decision</h3>
 <p>For UC-04, polish is focused on input ergonomics and responsive stability rather than adding game features. The canvas receives focus when play starts, pause/resume state is reflected in the button, and a narrow-viewport Playwright test checks that the playfield remains usable.</p>
+<h3>Agent Note</h3>
+<p>Merged PR #9 for UC-04. The execution graph now links UC-04 to its pull request.</p>
+<h3>Agent Decision</h3>
+<p>For UC-05, the evidence site is generated as static HTML so it can be inspected directly from the repository. Playwright captures four state screenshots and two short gameplay movies. Because Playwright records WebM natively, the capture script converts the recorded clips to MP4 with `ffmpeg` before writing the final evidence page.</p>
+<h3>Agent Note</h3>
+<p>Mobile evidence capture initially used pointer input, but the narrow viewport layout made that brittle for automation. The capture now starts the game through the same browser-visible Breakout API used by tests and moves the paddle directly for a short demonstration clip.</p>
     </section>
   </main>
   <script type="module">

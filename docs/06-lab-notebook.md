@@ -55,3 +55,15 @@ Merged PR #8 for UC-03. The execution graph now links UC-03 to its pull request.
 ### Agent Decision
 
 For UC-04, polish is focused on input ergonomics and responsive stability rather than adding game features. The canvas receives focus when play starts, pause/resume state is reflected in the button, and a narrow-viewport Playwright test checks that the playfield remains usable.
+
+### Agent Note
+
+Merged PR #9 for UC-04. The execution graph now links UC-04 to its pull request.
+
+### Agent Decision
+
+For UC-05, the evidence site is generated as static HTML so it can be inspected directly from the repository. Playwright captures four state screenshots and two short gameplay movies. Because Playwright records WebM natively, the capture script converts the recorded clips to MP4 with `ffmpeg` before writing the final evidence page.
+
+### Agent Note
+
+Mobile evidence capture initially used pointer input, but the narrow viewport layout made that brittle for automation. The capture now starts the game through the same browser-visible Breakout API used by tests and moves the paddle directly for a short demonstration clip.

@@ -20,7 +20,7 @@ flowchart LR
   click UC01 "https://github.com/la3lma/agentic-breakout-example/pull/6" "PR #6"
   click UC02 "https://github.com/la3lma/agentic-breakout-example/pull/7" "PR #7"
   click UC03 "https://github.com/la3lma/agentic-breakout-example/pull/8" "PR #8"
-  click UC04 "https://github.com/la3lma/agentic-breakout-example/issues/4" "Issue #4"
+  click UC04 "https://github.com/la3lma/agentic-breakout-example/pull/9" "PR #9"
   click UC05 "https://github.com/la3lma/agentic-breakout-example/issues/5" "Issue #5"
 ```
 
@@ -59,11 +59,12 @@ flowchart LR
 ### UC-04 Polish Presentation and Input Ergonomics
 
 - Issue: https://github.com/la3lma/agentic-breakout-example/issues/4
-- PR: pending
+- PR: https://github.com/la3lma/agentic-breakout-example/pull/9
 - Goal: make the game comfortable to demonstrate.
 - Pre-conditions: core and high score exist.
 - Post-conditions: responsive layout, keyboard and pointer/touch controls, clear status UI.
 - Observables: desktop and mobile screenshots, short gameplay clip.
+- Status: complete.
 
 ### UC-05 Capture Evidence Site and Update Issue-to-PR Graph
 

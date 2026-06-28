@@ -1,4 +1,4 @@
-.PHONY: all plan refresh-plan open-plan clean
+.PHONY: all plan refresh-plan open-plan evidence clean
 
 PLAN_URL := file://$(CURDIR)/site/plan.html
 
@@ -15,6 +15,8 @@ refresh-plan: site/plan.html
 
 open-plan: refresh-plan
 
+evidence:
+	node scripts/capture_evidence.mjs
+
 clean:
 	rm -rf site
-
