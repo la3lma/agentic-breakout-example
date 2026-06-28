@@ -47,3 +47,11 @@ Merged PR #7 for UC-02. The execution graph now links UC-02 to its pull request.
 ### Agent Decision
 
 For UC-03, high score is intentionally one number in `localStorage` under `agentic-breakout.bestScore`. There is no score history, player name, server call, or leaderboard. This matches the single-user, single-browser requirement and keeps the product surface small.
+
+### Agent Note
+
+Merged PR #8 for UC-03. The execution graph now links UC-03 to its pull request.
+
+### Agent Decision
+
+For UC-04, polish is focused on input ergonomics and responsive stability rather than adding game features. The canvas receives focus when play starts, pause/resume state is reflected in the button, and a narrow-viewport Playwright test checks that the playfield remains usable.

@@ -120,6 +120,7 @@ function startGame() {
     game.state = "playing";
     game.lastTime = performance.now();
     updateHud();
+    canvas.focus();
   }
 }
 
@@ -145,6 +146,9 @@ function updateHud() {
     lost: "Game Over",
   };
   statusEl.textContent = status[game.state];
+  pauseButton.disabled = game.state !== "playing" && game.state !== "paused";
+  pauseButton.textContent = game.state === "paused" ? "Resume" : "Pause";
+  startButton.disabled = game.state === "playing";
 }
 
 function clamp(value, min, max) {
@@ -366,6 +370,7 @@ canvas.addEventListener("pointerdown", (event) => {
   canvas.setPointerCapture(event.pointerId);
   game.paddle.x = clamp(canvasPointerX(event) - game.paddle.width / 2, 18, WIDTH - game.paddle.width - 18);
   startGame();
+  canvas.focus();
 });
 
 startButton.addEventListener("click", startGame);
