@@ -18,7 +18,7 @@ flowchart LR
   UC04 --> UC05
 
   click UC01 "https://github.com/la3lma/agentic-breakout-example/pull/6" "PR #6"
-  click UC02 "https://github.com/la3lma/agentic-breakout-example/issues/2" "Issue #2"
+  click UC02 "https://github.com/la3lma/agentic-breakout-example/pull/7" "PR #7"
   click UC03 "https://github.com/la3lma/agentic-breakout-example/issues/3" "Issue #3"
   click UC04 "https://github.com/la3lma/agentic-breakout-example/issues/4" "Issue #4"
   click UC05 "https://github.com/la3lma/agentic-breakout-example/issues/5" "Issue #5"
@@ -39,11 +39,12 @@ flowchart LR
 ### UC-02 Implement Playable Breakout Core
 
 - Issue: https://github.com/la3lma/agentic-breakout-example/issues/2
-- PR: pending
+- PR: https://github.com/la3lma/agentic-breakout-example/pull/7
 - Goal: implement paddle, ball, bricks, collision detection, lives, score, pause/restart, win/loss states.
 - Pre-conditions: document stack and scaffold exist.
 - Post-conditions: game runs as a static web app and is visibly playable.
 - Observables: browser run, Playwright smoke check, screenshot.
+- Status: complete.
 
 ### UC-03 Add Single-Browser High Score
 

@@ -6,6 +6,7 @@ test("loads and starts the Breakout core", async ({ page }) => {
   await expect(page.getByTestId("game-canvas")).toBeVisible();
   await expect(page.getByTestId("score")).toHaveText("0");
   await expect(page.getByTestId("lives")).toHaveText("3");
+  await expect(page.getByTestId("best-score")).toHaveText("0");
   await expect(page.getByTestId("status")).toHaveText("Ready");
 
   await page.getByRole("button", { name: "Start", exact: true }).click();
@@ -24,4 +25,16 @@ test("loads and starts the Breakout core", async ({ page }) => {
   expect(state.status).toBe("playing");
   expect(state.paddleX).toBeGreaterThan(480);
   expect(state.bricks).toBe(60);
+});
+
+test("persists one best score in the browser", async ({ page }) => {
+  await page.goto("/");
+
+  await page.evaluate(() => window.__breakout.recordScore(700));
+  await expect(page.getByTestId("score")).toHaveText("700");
+  await expect(page.getByTestId("best-score")).toHaveText("700");
+
+  await page.reload();
+  await expect(page.getByTestId("score")).toHaveText("0");
+  await expect(page.getByTestId("best-score")).toHaveText("700");
 });
