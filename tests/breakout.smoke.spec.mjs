@@ -38,3 +38,15 @@ test("persists one best score in the browser", async ({ page }) => {
   await expect(page.getByTestId("score")).toHaveText("0");
   await expect(page.getByTestId("best-score")).toHaveText("700");
 });
+
+test("keeps the playfield usable on a narrow viewport", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 740 });
+  await page.goto("/");
+
+  const box = await page.getByTestId("game-canvas").boundingBox();
+  expect(box.width).toBeLessThanOrEqual(370);
+  expect(box.height).toBeGreaterThan(200);
+
+  await page.getByTestId("game-canvas").click({ position: { x: box.width * 0.75, y: box.height * 0.82 } });
+  await expect(page.getByTestId("status")).toHaveText("Playing");
+});

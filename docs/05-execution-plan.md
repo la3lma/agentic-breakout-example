@@ -19,7 +19,7 @@ flowchart LR
 
   click UC01 "https://github.com/la3lma/agentic-breakout-example/pull/6" "PR #6"
   click UC02 "https://github.com/la3lma/agentic-breakout-example/pull/7" "PR #7"
-  click UC03 "https://github.com/la3lma/agentic-breakout-example/issues/3" "Issue #3"
+  click UC03 "https://github.com/la3lma/agentic-breakout-example/pull/8" "PR #8"
   click UC04 "https://github.com/la3lma/agentic-breakout-example/issues/4" "Issue #4"
   click UC05 "https://github.com/la3lma/agentic-breakout-example/issues/5" "Issue #5"
 ```
@@ -49,11 +49,12 @@ flowchart LR
 ### UC-03 Add Single-Browser High Score
 
 - Issue: https://github.com/la3lma/agentic-breakout-example/issues/3
-- PR: pending
+- PR: https://github.com/la3lma/agentic-breakout-example/pull/8
 - Goal: persist one best score in one browser using `localStorage`.
 - Pre-conditions: playable core exists.
 - Post-conditions: best score is visible and survives reloads in the same browser.
 - Observables: Playwright localStorage persistence check.
+- Status: complete.
 
 ### UC-04 Polish Presentation and Input Ergonomics
 
