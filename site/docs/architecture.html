@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture | Agentic Breakout</title>
+  <meta name="description" content="The static browser game, evidence capture, and documentation publishing model.">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Agentic Breakout</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Overview</a><a href="../game/index.html">Play</a><a href="../evidence/index.html">Evidence</a><a href="../plan.html">Plan</a><a href="../docs/lab-notebook.html">Notes</a><a href="../docs/index.html" aria-current="page">Docs</a>
+    </nav>
+  </header>
+  <main class="doc-layout">
+  <article class="doc">
+    <h1>Architecture Document</h1>
+<h2>Overview</h2>
+<p>The game is a static browser application.</p>
+<pre class="mermaid">flowchart LR
+  Browser[Browser]
+  HTML[index.html]
+  CSS[style.css]
+  JS[game.js]
+  Storage[(localStorage)]
+  Evidence[Playwright evidence capture]
+  Site[Static evidence pages]
+  Docs[Generated documentation site]
+  Pages[GitHub Pages]
+
+  Browser --&gt; HTML
+  HTML --&gt; CSS
+  HTML --&gt; JS
+  JS --&gt; Storage
+  Evidence --&gt; Browser
+  Evidence --&gt; Site
+  Site --&gt; Docs
+  Docs --&gt; Pages</pre>
+<h2>Components</h2>
+<ul>
+<li><code>index.html</code>: game shell and UI.</li>
+<li><code>src/styles.css</code>: visual presentation and responsive layout.</li>
+<li><code>src/game.js</code>: game state, rendering, controls, collisions, score, lives, and high-score persistence.</li>
+<li><code>evidence/</code>: static evidence pages, screenshots, videos, and notes.</li>
+<li><code>site/</code>: generated public documentation site for local inspection and GitHub Pages publication.</li>
+<li><code>.github/workflows/</code>: GitHub Pages publication workflow.</li>
+<li><code>scripts/</code>: utility scripts for rendering the documentation site, refreshing the live plan, serving static files, and capturing evidence.</li>
+<li><code>docs/</code>: document stack and lab notebook.</li>
+</ul>
+<h2>Runtime Model</h2>
+<p>The game uses a <code>requestAnimationFrame</code> loop. State lives in JavaScript objects. The canvas is redrawn every frame. Input updates the paddle target or paddle velocity. High score is read from and written to <code>localStorage</code>.</p>
+<h2>Evidence Model</h2>
+<p>Playwright starts or connects to a local static server, loads the game, interacts with it briefly, captures screenshots, records short MP4 clips, and writes a static <code>evidence/index.html</code> page that links the artifacts.</p>
+<h2>Documentation Publication Model</h2>
+<p>The documentation site generator reads the Markdown document stack, the evidence assets, and the browser game files. It writes a static site under <code>site/</code> with a presentation-style overview, browsable document pages, a compact lifecycle legend for the execution graph, a full evidence browser, and an embedded playable game. GitHub Pages publishes that generated directory using the repository workflow.</p>
+  </article>
+  <aside class="side-panel">
+    <p class="kicker">Document stack</p>
+    <h2>Architecture</h2>
+    <p>The static browser game, evidence capture, and documentation publishing model.</p>
+    <p><a href="index.html">Back to all documents</a></p>
+  </aside>
+</main>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+</body>
+</html>

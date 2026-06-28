@@ -71,3 +71,31 @@ Mobile evidence capture initially used pointer input, but the narrow viewport la
 ### Agent Note
 
 Opened PR #10 for UC-05. The execution graph and evidence page now link the final use case to the pull request that produced the evidence artifacts.
+
+### Human Instruction
+
+The human asked to extend the plan with a final documentation-site use case. The site should publish the full document stack through GitHub Pages, including TL;DR, vision/concept, PRD, plan, notes, and evidence. The graph legend should become more discrete, using compact color buttons rather than a large legend block.
+
+### Human Instruction
+
+The human clarified that the Pages site should be a polished presentation of what the project is supposed to do. It should include the document stack, a nicely browsable full evidence set, and a playable version of the game.
+
+### Human Instruction
+
+The human explicitly confirmed that this publication pass should be UC-06, and asked for the change to be recorded in the notes file.
+
+### Human Instruction
+
+The human asked for the repository README to point to the Pages site and include a screenshot of the game from the evidence captures.
+
+### Human Instruction
+
+The human asked for the original paper manuscript to include a pointer to this repository as the worked example, and for the Makefile to include a target that publishes the generated site to GitHub Pages.
+
+### Agent Decision
+
+UC-06 is the final publication pass. It keeps the existing issue-to-PR method intact by linking to issue #11 while the work is running, then updating the graph to the PR when the implementation pull request exists.
+
+### Agent Note
+
+Opened PR #12 for UC-06. The execution graph now links UC-06 to the pull request and marks the documentation-site publication pass complete.

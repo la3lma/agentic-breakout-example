@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TL;DR | Agentic Breakout</title>
+  <meta name="description" content="A short description of the game, method, document stack, and evidence trail.">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Agentic Breakout</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Overview</a><a href="../game/index.html">Play</a><a href="../evidence/index.html">Evidence</a><a href="../plan.html">Plan</a><a href="../docs/lab-notebook.html">Notes</a><a href="../docs/index.html" aria-current="page">Docs</a>
+    </nav>
+  </header>
+  <main class="doc-layout">
+  <article class="doc">
+    <h1>TL;DR</h1>
+<p>This repository is a worked example of a document-stack method for agentic software development.</p>
+<p>The concrete product is a browser-only JavaScript Breakout game. It runs as static web content, stores a single high score in the user's browser with <code>localStorage</code>, and intentionally avoids accounts, servers, multi-user scoring, or a global leaderboard.</p>
+<p>The method is demonstrated by keeping a complete document stack:</p>
+<ul>
+<li>source instructions</li>
+<li>TL;DR</li>
+<li>concept document</li>
+<li>product requirements document</li>
+<li>architecture document</li>
+<li>execution plan with issue and PR links</li>
+<li>lab notebook</li>
+<li>evidence site with screenshots and gameplay videos</li>
+</ul>
+<p>The execution plan starts with GitHub issue links. As each implementation use case is completed through a pull request, the plan graph is updated to link to the PR instead. Playwright captures static screenshots and short MP4 gameplay clips so the evidence can be inspected after the fact.</p>
+<p>The final use case publishes a browsable GitHub Pages documentation site. The site presents the project as a worked example, exposes every document in the stack, keeps the compact lifecycle legend with the use-case graph, includes the evidence screenshots and clips, and embeds the playable game.</p>
+  </article>
+  <aside class="side-panel">
+    <p class="kicker">Document stack</p>
+    <h2>TL;DR</h2>
+    <p>A short description of the game, method, document stack, and evidence trail.</p>
+    <p><a href="index.html">Back to all documents</a></p>
+  </aside>
+</main>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+</body>
+</html>

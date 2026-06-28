@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision Document | Agentic Breakout</title>
+  <meta name="description" content="The idea, context, success criteria, and non-goals for the worked example.">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Agentic Breakout</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Overview</a><a href="../game/index.html">Play</a><a href="../evidence/index.html">Evidence</a><a href="../plan.html">Plan</a><a href="../docs/lab-notebook.html">Notes</a><a href="../docs/index.html" aria-current="page">Docs</a>
+    </nav>
+  </header>
+  <main class="doc-layout">
+  <article class="doc">
+    <h1>Concept Document</h1>
+<h2>Idea</h2>
+<p>Build a small, polished implementation of classic Breakout as a JavaScript game and use the build itself as an example of document-stack-driven agentic development.</p>
+<p>The repository should be readable as both:</p>
+<ul>
+<li>a playable game project</li>
+<li>a concrete example of the methodology that produced it</li>
+<li>a polished public documentation site that presents the method, the plan, the evidence, and the playable artifact together</li>
+</ul>
+<h2>Context</h2>
+<p>The parent paper describes a way to steer agentic development with a stack of documents, small use cases, explicit pre- and post-conditions, dependency graphs, evidence, and a lab notebook. Breakout is intentionally small enough that the full method can be demonstrated without drowning the reader in product complexity.</p>
+<h2>Success Criteria</h2>
+<ul>
+<li>A public GitHub repository exists under <code>la3lma</code>.</li>
+<li>The repository is checked out under <code>~/git</code>.</li>
+<li>The game runs in a browser as static JavaScript.</li>
+<li>The player can move a paddle, break bricks, score points, lose lives, pause, restart, win, and lose.</li>
+<li>The high score persists for one browser/user via <code>localStorage</code>.</li>
+<li>The document stack and lab notebook describe the work.</li>
+<li>GitHub issues represent the implementation use cases.</li>
+<li>Pull requests implement the use cases.</li>
+<li>The execution graph links to issues first, then to PRs as they exist.</li>
+<li>Playwright captures screenshots and short MP4 clips.</li>
+<li>A static evidence page presents those artifacts.</li>
+<li>A GitHub Pages site presents the TL;DR, concept document, PRD, architecture, plan, lab notebook, evidence, and playable game.</li>
+<li>The repository README points readers to the Pages site and includes a representative game screenshot.</li>
+<li>The parent paper manuscript points to this repository as a public worked example.</li>
+</ul>
+<h2>Non-Goals</h2>
+<ul>
+<li>No server backend.</li>
+<li>No user accounts.</li>
+<li>No networked multiplayer.</li>
+<li>No global leaderboard.</li>
+<li>No elaborate asset pipeline.</li>
+</ul>
+  </article>
+  <aside class="side-panel">
+    <p class="kicker">Document stack</p>
+    <h2>Vision Document</h2>
+    <p>The idea, context, success criteria, and non-goals for the worked example.</p>
+    <p><a href="index.html">Back to all documents</a></p>
+  </aside>
+</main>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+</body>
+</html>

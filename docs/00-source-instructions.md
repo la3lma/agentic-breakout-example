@@ -18,3 +18,14 @@ Additional human instruction:
 
 > The plan document should be open in the system browser as a tab, and AppleScript should be used to update the tab. The updating should happen through the Makefile.
 
+Additional human instruction:
+
+> Extend the plan to generate a documentation site on GitHub Pages. The documentation pages should be published there, including the plan, TL;DR, notes, and other document-stack pages. The graph legend should be more discrete, with small color buttons rather than a large legend block.
+
+Additional human instruction:
+
+> The GitHub Pages site should look like a polished presentation of what the project is supposed to do, with TL;DR, vision document, PRD, plan, notes, a full browsable evidence set, and the game playable. Add this as the final use case in the plan and update the other documents accordingly.
+
+Additional human instruction:
+
+> Record these changes in the notes file, keep the final publication pass as UC-06, make the repository README point to the Pages site and include a game screenshot, add a pointer to this repository from the original paper manuscript, and add a Makefile target to publish to GitHub Pages.

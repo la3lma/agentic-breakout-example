@@ -17,3 +17,4 @@ The method is demonstrated by keeping a complete document stack:
 
 The execution plan starts with GitHub issue links. As each implementation use case is completed through a pull request, the plan graph is updated to link to the PR instead. Playwright captures static screenshots and short MP4 gameplay clips so the evidence can be inspected after the fact.
 
+The final use case publishes a browsable GitHub Pages documentation site. The site presents the project as a worked example, exposes every document in the stack, keeps the compact lifecycle legend with the use-case graph, includes the evidence screenshots and clips, and embeds the playable game.

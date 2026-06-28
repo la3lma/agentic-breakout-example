@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab Notebook | Agentic Breakout</title>
+  <meta name="description" content="Human instructions, agent notes, decisions, detours, and validation observations.">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Agentic Breakout</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Overview</a><a href="../game/index.html">Play</a><a href="../evidence/index.html">Evidence</a><a href="../plan.html">Plan</a><a href="../docs/lab-notebook.html" aria-current="page">Notes</a><a href="../docs/index.html">Docs</a>
+    </nav>
+  </header>
+  <main class="doc-layout">
+  <article class="doc">
+    <h1>Lab Notebook</h1>
+<p>This notebook records observations, decisions, detours, and human instructions during the build. It is deliberately less formal than the execution plan.</p>
+<h2>2026-06-28</h2>
+<h3>Human Instruction</h3>
+<p>The human asked for a public <code>la3lma</code> GitHub repository, checked out under <code>~/git</code>, containing a JavaScript Breakout implementation built using the document-stack methodology. The game needs a single-browser high score and no multi-user score system.</p>
+<h3>Human Instruction</h3>
+<p>The human explicitly asked for a lab notebook in the document stack. The notebook should include notes made by the agent, by the human, and by the human through the agent. It should capture decisions and explorations even when they wander outside the strict plan/evidence stack.</p>
+<h3>Human Instruction</h3>
+<p>The human asked for the plan document to be open in the system browser as a tab and updated via AppleScript through the Makefile.</p>
+<h3>Agent Note</h3>
+<p>Created public repository <code>la3lma/agentic-breakout-example</code> and cloned it to <code>/Users/rmz/git/agentic-breakout-example</code>. Created five GitHub issues representing the initial implementation use cases.</p>
+<h3>Agent Decision</h3>
+<p>The live plan page is generated from Markdown using a small dependency-free Node script. This keeps the planning loop available before installing game/test dependencies.</p>
+<h3>Agent Decision</h3>
+<p>The browser refresh mechanism is implemented as a Makefile target invoking AppleScript. The script attempts to refresh an existing tab for the plan URL in common macOS browsers, and opens the URL if no matching tab exists.</p>
+<h3>Agent Note</h3>
+<p>Merged PR #6 for UC-01. The execution graph now links UC-01 to its pull request instead of the original issue.</p>
+<h3>Agent Decision</h3>
+<p>For UC-02, the game core is implemented as a dependency-light static browser app using <code>canvas</code> and <code>requestAnimationFrame</code>. The first pass deliberately includes score and lives because those are part of core play, but leaves persistent high score for UC-03.</p>
+<h3>Agent Note</h3>
+<p>Added a small Node static server and a Playwright smoke test so the game can be loaded and checked before the later evidence-capture use case.</p>
+<h3>Agent Note</h3>
+<p>Merged PR #7 for UC-02. The execution graph now links UC-02 to its pull request.</p>
+<h3>Agent Decision</h3>
+<p>For UC-03, high score is intentionally one number in <code>localStorage</code> under <code>agentic-breakout.bestScore</code>. There is no score history, player name, server call, or leaderboard. This matches the single-user, single-browser requirement and keeps the product surface small.</p>
+<h3>Agent Note</h3>
+<p>Merged PR #8 for UC-03. The execution graph now links UC-03 to its pull request.</p>
+<h3>Agent Decision</h3>
+<p>For UC-04, polish is focused on input ergonomics and responsive stability rather than adding game features. The canvas receives focus when play starts, pause/resume state is reflected in the button, and a narrow-viewport Playwright test checks that the playfield remains usable.</p>
+<h3>Agent Note</h3>
+<p>Merged PR #9 for UC-04. The execution graph now links UC-04 to its pull request.</p>
+<h3>Agent Decision</h3>
+<p>For UC-05, the evidence site is generated as static HTML so it can be inspected directly from the repository. Playwright captures four state screenshots and two short gameplay movies. Because Playwright records WebM natively, the capture script converts the recorded clips to MP4 with <code>ffmpeg</code> before writing the final evidence page.</p>
+<h3>Agent Note</h3>
+<p>Mobile evidence capture initially used pointer input, but the narrow viewport layout made that brittle for automation. The capture now starts the game through the same browser-visible Breakout API used by tests and moves the paddle directly for a short demonstration clip.</p>
+<h3>Agent Note</h3>
+<p>Opened PR #10 for UC-05. The execution graph and evidence page now link the final use case to the pull request that produced the evidence artifacts.</p>
+<h3>Human Instruction</h3>
+<p>The human asked to extend the plan with a final documentation-site use case. The site should publish the full document stack through GitHub Pages, including TL;DR, vision/concept, PRD, plan, notes, and evidence. The graph legend should become more discrete, using compact color buttons rather than a large legend block.</p>
+<h3>Human Instruction</h3>
+<p>The human clarified that the Pages site should be a polished presentation of what the project is supposed to do. It should include the document stack, a nicely browsable full evidence set, and a playable version of the game.</p>
+<h3>Human Instruction</h3>
+<p>The human explicitly confirmed that this publication pass should be UC-06, and asked for the change to be recorded in the notes file.</p>
+<h3>Human Instruction</h3>
+<p>The human asked for the repository README to point to the Pages site and include a screenshot of the game from the evidence captures.</p>
+<h3>Human Instruction</h3>
+<p>The human asked for the original paper manuscript to include a pointer to this repository as the worked example, and for the Makefile to include a target that publishes the generated site to GitHub Pages.</p>
+<h3>Agent Decision</h3>
+<p>UC-06 is the final publication pass. It keeps the existing issue-to-PR method intact by linking to issue #11 while the work is running, then updating the graph to the PR when the implementation pull request exists.</p>
+<h3>Agent Note</h3>
+<p>Opened PR #12 for UC-06. The execution graph now links UC-06 to the pull request and marks the documentation-site publication pass complete.</p>
+  </article>
+  <aside class="side-panel">
+    <p class="kicker">Document stack</p>
+    <h2>Lab Notebook</h2>
+    <p>Human instructions, agent notes, decisions, detours, and validation observations.</p>
+    <p><a href="index.html">Back to all documents</a></p>
+  </aside>
+</main>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+</body>
+</html>

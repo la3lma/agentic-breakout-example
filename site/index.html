@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Overview | Agentic Breakout</title>
+  <meta name="description" content="A polished documentation site for the Agentic Breakout worked example.">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Agentic Breakout</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="index.html" aria-current="page">Overview</a><a href="game/index.html">Play</a><a href="evidence/index.html">Evidence</a><a href="plan.html">Plan</a><a href="docs/lab-notebook.html">Notes</a><a href="docs/index.html">Docs</a>
+    </nav>
+  </header>
+  <main>
+  <section class="hero" style="background-image: linear-gradient(90deg, rgba(19, 34, 56, 0.92), rgba(19, 34, 56, 0.54), rgba(19, 34, 56, 0.25)), url('evidence/assets/screenshots/02-playing.png');">
+    <p class="kicker">Document-stack development example</p>
+    <h1>Agentic Breakout Example</h1>
+    <p>A playable JavaScript Breakout game built as a worked example of use-case-driven agentic development, with documents, issues, pull requests, evidence captures, and a lab notebook kept together.</p>
+    <div class="actions">
+      <a class="action" href="game/index.html">Play the game</a>
+      <a class="action" href="evidence/index.html">Browse evidence</a>
+      <a class="action" href="plan.html">Open the plan</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What This Demonstrates</h2>
+    <div class="intro-grid">
+      <article class="card">
+  <h3>TL;DR</h3>
+  <p>A compact explanation of the worked example and its document stack.</p>
+  <a href="docs/tldr.html">Open</a>
+</article>
+      <article class="card">
+  <h3>Vision</h3>
+  <p>The concept document explains why Breakout is a useful small target for the method.</p>
+  <a href="docs/vision.html">Open</a>
+</article>
+      <article class="card">
+  <h3>Product Requirements</h3>
+  <p>The PRD defines the game, evidence, and documentation requirements.</p>
+  <a href="docs/prd.html">Open</a>
+</article>
+      <article class="card">
+  <h3>Execution Plan</h3>
+  <p>The use-case graph links issues first, then pull requests after completion.</p>
+  <a href="plan.html">Open</a>
+</article>
+      <article class="card">
+  <h3>Lab Notebook</h3>
+  <p>Notes capture human instructions, agent decisions, detours, and validation.</p>
+  <a href="docs/lab-notebook.html">Open</a>
+</article>
+      <article class="card">
+  <h3>Evidence</h3>
+  <p>Screenshots and MP4 clips show the game evolving and running in real time.</p>
+  <a href="evidence/index.html">Open</a>
+</article>
+    </div>
+  </section>
+</main>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+</body>
+</html>

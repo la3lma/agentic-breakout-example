@@ -4,6 +4,14 @@ This repository is a worked example of a document-stack methodology for agentic 
 
 The game is intentionally browser-only: static HTML, CSS, and JavaScript, with a single-user high score stored in one browser.
 
+## Documentation Site
+
+The public documentation site is published through GitHub Pages:
+
+https://la3lma.github.io/agentic-breakout-example/
+
+![Agentic Breakout game in play](evidence/assets/screenshots/02-playing.png)
+
 ## Document Stack
 
 - `docs/00-source-instructions.md`
@@ -31,3 +39,17 @@ make refresh-plan
 ```
 
 The generated page is written to `site/plan.html`.
+
+## Publish
+
+Generate the full documentation site locally:
+
+```bash
+make site
+```
+
+After changes are merged to `main`, publish the generated site through GitHub Pages:
+
+```bash
+make publish
+```

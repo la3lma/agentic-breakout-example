@@ -8,6 +8,7 @@ The repository should be readable as both:
 
 - a playable game project
 - a concrete example of the methodology that produced it
+- a polished public documentation site that presents the method, the plan, the evidence, and the playable artifact together
 
 ## Context
 
@@ -26,6 +27,9 @@ The parent paper describes a way to steer agentic development with a stack of do
 - The execution graph links to issues first, then to PRs as they exist.
 - Playwright captures screenshots and short MP4 clips.
 - A static evidence page presents those artifacts.
+- A GitHub Pages site presents the TL;DR, concept document, PRD, architecture, plan, lab notebook, evidence, and playable game.
+- The repository README points readers to the Pages site and includes a representative game screenshot.
+- The parent paper manuscript points to this repository as a public worked example.
 
 ## Non-Goals
 
@@ -34,4 +38,3 @@ The parent paper describes a way to steer agentic development with a stack of do
 - No networked multiplayer.
 - No global leaderboard.
 - No elaborate asset pipeline.
-
