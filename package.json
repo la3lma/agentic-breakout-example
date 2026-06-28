@@ -1,0 +1,15 @@
+{
+  "name": "agentic-breakout-example",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve_static.mjs",
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/breakout.smoke.spec.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1"
+  }
+}
+
