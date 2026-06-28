@@ -28,3 +28,14 @@ The live plan page is generated from Markdown using a small dependency-free Node
 
 The browser refresh mechanism is implemented as a Makefile target invoking AppleScript. The script attempts to refresh an existing tab for the plan URL in common macOS browsers, and opens the URL if no matching tab exists.
 
+### Agent Note
+
+Merged PR #6 for UC-01. The execution graph now links UC-01 to its pull request instead of the original issue.
+
+### Agent Decision
+
+For UC-02, the game core is implemented as a dependency-light static browser app using `canvas` and `requestAnimationFrame`. The first pass deliberately includes score and lives because those are part of core play, but leaves persistent high score for UC-03.
+
+### Agent Note
+
+Added a small Node static server and a Playwright smoke test so the game can be loaded and checked before the later evidence-capture use case.

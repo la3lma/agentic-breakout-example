@@ -77,7 +77,7 @@
   <header>
     <h1>Agentic Breakout Plan</h1>
     <p>Live generated view of the execution plan and lab notebook.</p>
-    <p class="timestamp">Generated 2026-06-28T20:16:37.579Z</p>
+    <p class="timestamp">Generated 2026-06-28T20:23:46.265Z</p>
   </header>
   <main>
     <section>
@@ -96,7 +96,7 @@
   UC03 --&gt; UC04
   UC04 --&gt; UC05
 
-  click UC01 &quot;https://github.com/la3lma/agentic-breakout-example/issues/1&quot; &quot;Issue #1&quot;
+  click UC01 &quot;https://github.com/la3lma/agentic-breakout-example/pull/6&quot; &quot;PR #6&quot;
   click UC02 &quot;https://github.com/la3lma/agentic-breakout-example/issues/2&quot; &quot;Issue #2&quot;
   click UC03 &quot;https://github.com/la3lma/agentic-breakout-example/issues/3&quot; &quot;Issue #3&quot;
   click UC04 &quot;https://github.com/la3lma/agentic-breakout-example/issues/4&quot; &quot;Issue #4&quot;
@@ -105,11 +105,12 @@
 <h3>UC-01 Bootstrap Repository and Document Stack</h3>
 <ul>
 <li>Issue: <a href="https://github.com/la3lma/agentic-breakout-example/issues/1">https://github.com/la3lma/agentic-breakout-example/issues/1</a></li>
-<li>PR: pending</li>
+<li>PR: <a href="https://github.com/la3lma/agentic-breakout-example/pull/6">https://github.com/la3lma/agentic-breakout-example/pull/6</a></li>
 <li>Goal: establish repository structure, document stack, lab notebook, live plan page, and Makefile support.</li>
 <li>Pre-conditions: public repository and local checkout exist.</li>
 <li>Post-conditions: stack documents exist, plan page can be generated, and `make refresh-plan` opens or refreshes the plan tab.</li>
 <li>Observables: repository tree, generated `site/plan.html`, browser tab refresh.</li>
+<li>Status: complete.</li>
 </ul>
 <h3>UC-02 Implement Playable Breakout Core</h3>
 <ul>
@@ -164,6 +165,12 @@
 <p>The live plan page is generated from Markdown using a small dependency-free Node script. This keeps the planning loop available before installing game/test dependencies.</p>
 <h3>Agent Decision</h3>
 <p>The browser refresh mechanism is implemented as a Makefile target invoking AppleScript. The script attempts to refresh an existing tab for the plan URL in common macOS browsers, and opens the URL if no matching tab exists.</p>
+<h3>Agent Note</h3>
+<p>Merged PR #6 for UC-01. The execution graph now links UC-01 to its pull request instead of the original issue.</p>
+<h3>Agent Decision</h3>
+<p>For UC-02, the game core is implemented as a dependency-light static browser app using `canvas` and `requestAnimationFrame`. The first pass deliberately includes score and lives because those are part of core play, but leaves persistent high score for UC-03.</p>
+<h3>Agent Note</h3>
+<p>Added a small Node static server and a Playwright smoke test so the game can be loaded and checked before the later evidence-capture use case.</p>
     </section>
   </main>
   <script type="module">
