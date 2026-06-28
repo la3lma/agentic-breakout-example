@@ -26,15 +26,14 @@ flowchart LR
   classDef blocked fill:#ffd6d6,stroke:#b42318,color:#5c1111,stroke-width:2px
   classDef deferred fill:#eadcff,stroke:#7e3fb2,color:#3a1a5f,stroke-width:2px
 
-  class UC01,UC02,UC03,UC04,UC05 done
-  class UC06 running
+  class UC01,UC02,UC03,UC04,UC05,UC06 done
 
   click UC01 "https://github.com/la3lma/agentic-breakout-example/pull/6" "PR #6"
   click UC02 "https://github.com/la3lma/agentic-breakout-example/pull/7" "PR #7"
   click UC03 "https://github.com/la3lma/agentic-breakout-example/pull/8" "PR #8"
   click UC04 "https://github.com/la3lma/agentic-breakout-example/pull/9" "PR #9"
   click UC05 "https://github.com/la3lma/agentic-breakout-example/pull/10" "PR #10"
-  click UC06 "https://github.com/la3lma/agentic-breakout-example/issues/11" "Issue #11"
+  click UC06 "https://github.com/la3lma/agentic-breakout-example/pull/12" "PR #12"
 ```
 
 <div class="status-legend" aria-label="Use-case lifecycle legend">
@@ -101,9 +100,9 @@ flowchart LR
 ### UC-06 Publish Documentation Site
 
 - Issue: https://github.com/la3lma/agentic-breakout-example/issues/11
-- PR: pending
+- PR: https://github.com/la3lma/agentic-breakout-example/pull/12
 - Goal: publish a polished GitHub Pages documentation site that presents the project, document stack, evidence, and playable game.
 - Pre-conditions: the game, document stack, evidence captures, and PR graph exist.
 - Post-conditions: the generated site contains TL;DR, concept/vision, PRD, architecture, plan, source instructions, lab notebook, browsable evidence, and a playable game page at `https://la3lma.github.io/agentic-breakout-example/`.
 - Observables: generated `site/` pages, compact graph legend, GitHub Pages workflow, published Pages URL, and playable game from the documentation site.
-- Status: running.
+- Status: complete.

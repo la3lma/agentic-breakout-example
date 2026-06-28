@@ -40,15 +40,14 @@
   classDef blocked fill:#ffd6d6,stroke:#b42318,color:#5c1111,stroke-width:2px
   classDef deferred fill:#eadcff,stroke:#7e3fb2,color:#3a1a5f,stroke-width:2px
 
-  class UC01,UC02,UC03,UC04,UC05 done
-  class UC06 running
+  class UC01,UC02,UC03,UC04,UC05,UC06 done
 
   click UC01 &quot;https://github.com/la3lma/agentic-breakout-example/pull/6&quot; &quot;PR #6&quot;
   click UC02 &quot;https://github.com/la3lma/agentic-breakout-example/pull/7&quot; &quot;PR #7&quot;
   click UC03 &quot;https://github.com/la3lma/agentic-breakout-example/pull/8&quot; &quot;PR #8&quot;
   click UC04 &quot;https://github.com/la3lma/agentic-breakout-example/pull/9&quot; &quot;PR #9&quot;
   click UC05 &quot;https://github.com/la3lma/agentic-breakout-example/pull/10&quot; &quot;PR #10&quot;
-  click UC06 &quot;https://github.com/la3lma/agentic-breakout-example/issues/11&quot; &quot;Issue #11&quot;</pre>
+  click UC06 &quot;https://github.com/la3lma/agentic-breakout-example/pull/12&quot; &quot;PR #12&quot;</pre>
 <div class="status-legend" aria-label="Use-case lifecycle legend">
   <span class="status-chip status-done">Done</span>
   <span class="status-chip status-ready">Ready</span>
@@ -111,12 +110,12 @@
 <h3>UC-06 Publish Documentation Site</h3>
 <ul>
 <li>Issue: <a href="https://github.com/la3lma/agentic-breakout-example/issues/11">https://github.com/la3lma/agentic-breakout-example/issues/11</a></li>
-<li>PR: pending</li>
+<li>PR: <a href="https://github.com/la3lma/agentic-breakout-example/pull/12">https://github.com/la3lma/agentic-breakout-example/pull/12</a></li>
 <li>Goal: publish a polished GitHub Pages documentation site that presents the project, document stack, evidence, and playable game.</li>
 <li>Pre-conditions: the game, document stack, evidence captures, and PR graph exist.</li>
 <li>Post-conditions: the generated site contains TL;DR, concept/vision, PRD, architecture, plan, source instructions, lab notebook, browsable evidence, and a playable game page at <code><a href="https://la3lma.github.io/agentic-breakout-example/</code>.">https://la3lma.github.io/agentic-breakout-example/`.</a></li>
 <li>Observables: generated <code>site/</code> pages, compact graph legend, GitHub Pages workflow, published Pages URL, and playable game from the documentation site.</li>
-<li>Status: running.</li>
+<li>Status: complete.</li>
 </ul>
   </article>
   <aside class="side-panel">
@@ -126,11 +125,11 @@
     <p><a href="docs/lab-notebook.html">Open the notes</a></p>
     <h3>Recent Source</h3>
     <h3>Human Instruction</h3>
-<p>The human asked for the repository README to point to the Pages site and include a screenshot of the game from the evidence captures.</p>
-<h3>Human Instruction</h3>
 <p>The human asked for the original paper manuscript to include a pointer to this repository as the worked example, and for the Makefile to include a target that publishes the generated site to GitHub Pages.</p>
 <h3>Agent Decision</h3>
 <p>UC-06 is the final publication pass. It keeps the existing issue-to-PR method intact by linking to issue #11 while the work is running, then updating the graph to the PR when the implementation pull request exists.</p>
+<h3>Agent Note</h3>
+<p>Opened PR #12 for UC-06. The execution graph now links UC-06 to the pull request and marks the documentation-site publication pass complete.</p>
   </aside>
 </main>
   <script type="module">

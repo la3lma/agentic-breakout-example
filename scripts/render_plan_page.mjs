@@ -744,7 +744,7 @@ async function renderEvidence() {
       ["PR #8", "Add single-browser high score", "https://github.com/la3lma/agentic-breakout-example/pull/8"],
       ["PR #9", "Polish responsive Breakout input", "https://github.com/la3lma/agentic-breakout-example/pull/9"],
       ["PR #10", "Capture evidence site and final graph", "https://github.com/la3lma/agentic-breakout-example/pull/10"],
-      ["Issue #11", "Publish documentation site with compact graph legend", "https://github.com/la3lma/agentic-breakout-example/issues/11"],
+      ["PR #12", "Publish documentation site with compact graph legend", "https://github.com/la3lma/agentic-breakout-example/pull/12"],
     ].map(([title, bodyText, href]) => card(title, bodyText, href, "Open")).join("\n")}
   </div>
 

@@ -95,3 +95,7 @@ The human asked for the original paper manuscript to include a pointer to this r
 ### Agent Decision
 
 UC-06 is the final publication pass. It keeps the existing issue-to-PR method intact by linking to issue #11 while the work is running, then updating the graph to the PR when the implementation pull request exists.
+
+### Agent Note
+
+Opened PR #12 for UC-06. The execution graph now links UC-06 to the pull request and marks the documentation-site publication pass complete.
