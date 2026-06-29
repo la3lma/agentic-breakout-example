@@ -209,13 +209,16 @@ function navigation(prefix, active) {
     ["plan.html", "Plan"],
     ["docs/lab-notebook.html", "Notes"],
     ["docs/index.html", "Docs"],
+    ["https://github.com/la3lma/agentic-breakout-example", "GitHub"],
   ];
 
   return items
     .map(([href, label]) => {
-      const target = `${prefix}${href}`;
+      const isExternal = href.startsWith("https://");
+      const target = isExternal ? href : `${prefix}${href}`;
       const current = active === label ? ' aria-current="page"' : "";
-      return `<a href="${target}"${current}>${label}</a>`;
+      const external = isExternal ? ' rel="noopener"' : "";
+      return `<a href="${target}"${current}${external}>${label}</a>`;
     })
     .join("");
 }
